@@ -1,4 +1,4 @@
-#
+### web.xml配置中servlet-class地址为src中的包地址
 # 方法
 ### request.getParameterMap()
 此处request是HttpServletRequest类型：
