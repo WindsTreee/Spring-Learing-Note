@@ -1,4 +1,5 @@
-方法
+#
+# 方法
 ### request.getParameterMap()
 此处request是HttpServletRequest类型：
 返回一个Map类型的值，该值记录了前端页面提交请求中请求参数与请求参数值的映射关系
