@@ -8,10 +8,9 @@
 2. getPageInfo():与getServletPath()获取的路径互补，能够得到的是“url-pattern”中*d的路径部分 
 3. getContextPath():获取项目的根路径 
 4. getRequestURI:获取根路径到地址结尾 
-5. getRequestURL:获取请求的地址链接（浏览器中输入的地址） 
-6. getServletContext().getRealPath(“/”):获取“/”在机器中的实际地址 
-7. getScheme():获取的是使用的协议(http 或https) 
-8. getProtocol():获取的是协议的名称(HTTP/1.11) 
-9. getServerName():获取的是域名(xxx.com) 
-10. getLocalName:获取到的是IP
+5. getServletContext().getRealPath(“/”):获取“/”在机器中的实际地址 
+6. getScheme():获取的是使用的协议(http 或https) 
+7. getProtocol():获取的是协议的名称(HTTP/1.11) 
+8. getServerName():获取的是域名(xxx.com) 
+9. getLocalName:获取到的是IP
 [参考链接](https://blog.csdn.net/qq_27770257/article/details/79438987 )
