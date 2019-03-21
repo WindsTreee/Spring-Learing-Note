@@ -14,3 +14,4 @@
 8. getServerName():获取的是域名(xxx.com) 
 9. getLocalName:获取到的是IP
 [参考链接](https://blog.csdn.net/qq_27770257/article/details/79438987 )
+### 重定向时的路径一定要带项目名称，例如：req.getContextPath()+"/msg.jsp"
