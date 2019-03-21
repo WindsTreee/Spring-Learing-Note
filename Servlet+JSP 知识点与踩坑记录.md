@@ -16,3 +16,5 @@
 [参考链接](https://blog.csdn.net/qq_27770257/article/details/79438987 )
 ### 重定向时的路径一定要带项目名称，例如：req.getContextPath()+"/msg.jsp"
 ## 转发（如：req.getRequestDispatcher(msg).forward(req, resp)）则不用
+
+### Servlet生命周期：
