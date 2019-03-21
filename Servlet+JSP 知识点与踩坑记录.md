@@ -18,4 +18,4 @@
 ## 转发（如：req.getRequestDispatcher(msg).forward(req, resp)）则不用
 
 ### Servlet生命周期：init()->service()->destory() 
-一个servlet在服务器上只有一个实例存在
+### 一个servlet在服务器上只有一个实例存在
