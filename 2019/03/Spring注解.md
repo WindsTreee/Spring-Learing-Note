@@ -1,2 +1,2 @@
 ## restcontroller与controller区别
-@RestController为
+@RestController为@Controller和@ResponseBody的结合，它可以为
