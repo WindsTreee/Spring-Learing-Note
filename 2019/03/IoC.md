@@ -5,14 +5,15 @@
 > MoAttack类：
 public class MoAttack {
 	private GeLi geli;
-
 	public MoAttack(GeLi geli){
 		this.geli=geli;
 	}
-
 	public void cityGateAsk(){
 		geli.responseAsk("开门！");
-	}
+	}```language
+
+```
+
 }
 2.属性注入
 3.接口注入(一般不采用)
