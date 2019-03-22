@@ -26,6 +26,7 @@ public class Director{
 
 }
 ```
+这样Director类实现了角色选择（LiDeHua）和剧本中角色扮演的
 
 2.属性注入
 3.接口注入(一般不采用)
