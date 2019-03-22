@@ -3,6 +3,7 @@
 # IoC的3种注入类型：
 1.构造函数注入
 > MoAttack类：
+```
 public class MoAttack {
 	private GeLi geli;
 	public MoAttack(GeLi geli){
@@ -10,10 +11,21 @@ public class MoAttack {
 	}
 	public void cityGateAsk(){
 		geli.responseAsk("开门！");
-	}```language
-
+	}
+}
 ```
+> Direct类：
+```
+public class Director{
+	public void direct(){
+		GeLi geli = new LiuDeHua();
+
+		MoAttack moAttack = new MoAttack(geli);
+		moAttack.cityGateAsk();
+	}
 
 }
+```
+
 2.属性注入
 3.接口注入(一般不采用)
