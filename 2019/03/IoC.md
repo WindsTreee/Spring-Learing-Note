@@ -46,7 +46,15 @@ public class MoAttack {
 ```
 > Direct类：
 ```
-
+public class Director{
+	public void direct(){
+		MoAttack moAttack = new MoAttack();
+		
+		GeLi geli = new LiuDeHua();
+		moAttack.setGeli(geli);   //进行属性注入
+		moAttack.cityGateAsk();
+	}
+}
 ```
 
 ## 3.接口注入(一般不采用)
