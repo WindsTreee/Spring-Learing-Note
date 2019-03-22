@@ -30,5 +30,23 @@ public class Director{
 
 ## 2.属性注入
 因为在构造函数注入中选择角色在MoAttack的构造方法里面，但是不是每一个场景都有LiDeHua出场的，所以最好采用Setter方法进行注入较好，这就是属性注入
+> MoAttack类：
+```
+public class MoAttack {
+	private GeLi geli;
+
+	public GeLi setGeli(GeLi geli){
+		this.geli=geli;
+	}
+
+	public void cityGateAsk(){
+		geli.responseAsk("开门！");
+	}
+}
+```
+> Direct类：
+```
+
+```
 
 ## 3.接口注入(一般不采用)
