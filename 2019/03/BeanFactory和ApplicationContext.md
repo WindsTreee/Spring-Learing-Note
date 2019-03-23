@@ -1,0 +1,1 @@
+BeanFactory(Bean工厂)是Spring框架最核心的接口，它提供了高级IoC的
