@@ -1,3 +1,5 @@
 # 基本概念
-BeanFactory(Bean工厂，一般称)是Spring框架最核心的接口，它提供了高级IoC的配置机制。
-ApplicationContext(应用上下文)建立在BeanFactory的基础之上，提供了更多面向应用的功能，更易于创建实际应用
+BeanFactory(Bean工厂，一般称IoC容器)是Spring框架最核心的接口，它提供了高级IoC的配置机制。
+ApplicationContext(应用上下文，也称为Spring容器)建立在BeanFactory的基础之上，提供了更多面向应用的功能，更易于创建实际应用
+# 区别
+BeanFactory是Spri
