@@ -4,5 +4,5 @@ ApplicationContext(应用上下文，也称为Spring容器)建立在BeanFactory�
 # 区别
 BeanFactory是Spring框架的基础设施，面向Spring本身，是底层架构，而ApplicationContext则是面向开发者，几乎所有的应用场合都直接采用ApplicationContext而非BeanFactory
 # 初始化
-BeanFactory在初始化容器时并未
-ApplicationContext
+BeanFactory在初始化容器时并未实例化Bean，直到第一次访问某个Bean时才实例化目标Bean
+ApplicationContext在初始化
