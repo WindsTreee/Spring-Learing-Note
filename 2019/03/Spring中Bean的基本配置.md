@@ -44,6 +44,7 @@ Car中有一个构造函数：
 这里Spring根据配置里面的类型自动匹配对应的构造方法
 
 **按索引匹配入参**
+
 假定Car类的构造方法有多个相同类型入参
 ```
 	public Car(String brand, String corp, int maxSpeed) {
@@ -67,6 +68,7 @@ Car中有一个构造函数：
 	</bean>
 ```
 **按索引和类型匹配入参**
+
 Car有两个构造函数
 ```
 	public Car(String brand, String corp, double price) {
@@ -97,6 +99,7 @@ Car有两个构造函数
 这里引起歧义的是第三个入参，所以前两个的type可以去除
 
 **根据反射机制自动匹配入参**
+
 如果Bean的构造函数入参类型是可辨别的（非基础类型数据且入参类型各异），Spring可以根据入参类型自动完成注入
 Boss类的构造函数
 ```
