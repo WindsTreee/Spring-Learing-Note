@@ -21,6 +21,7 @@ Spring只会检查调用的类中是否有Setter方法，不检查是否有对�
 PS：一般建议变量名满足前两个字母大小写一致，方便配置
 # 2.构造函数注入配置
 **按类型匹配入参**
+
 Car中有一个构造函数：
 ```
 	public Car(String brand, double price) {
@@ -29,7 +30,7 @@ Car中有一个构造函数：
 	}	
 
 ```
-
+对应的Bean配置
 ```
 <bean id="car1" class="com.smart.ditype.Car">
 		<constructor-arg type="java.lang.String">
@@ -40,3 +41,4 @@ Car中有一个构造函数：
 		</constructor-arg>
 	</bean>
 ```
+这里Spring根据配置里面的类型自动
