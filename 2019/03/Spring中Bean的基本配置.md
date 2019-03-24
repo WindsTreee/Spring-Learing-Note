@@ -97,5 +97,16 @@ Car有两个构造函数
 这里引起歧义的是第三个入参，所以前两个的type可以去除
 
 **根据反射机制自动匹配入参**
-如果Bean的构造函数入参类型是可辨别的（非基础类型数据且入参类型各异，就是三个类型不同）
+如果Bean的构造函数入参类型是可辨别的（非基础类型数据且入参类型各异），Spring可以根据入参类型自动完成注入
+Boss类的构造函数
+```
+	public Boss(String name, Car car, Office office) {
+		this.name = name;
+		this.car = car;
+		this.office = office;
+	}
+
+```
+自动入参配置
+
 
