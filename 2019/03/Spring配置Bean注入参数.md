@@ -29,7 +29,8 @@
 # 4.null值
 注入null值要使用null专属标签
 ```
-<propert
+<property name="brand"><null/></property>
 ```
+# 5.级联属性
 
 
