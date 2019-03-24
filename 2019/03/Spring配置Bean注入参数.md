@@ -10,4 +10,8 @@
 ```
 **遇到XML特殊符合要进行转义处理或者加特殊标签**
 # 2.引用其他Bean
-通过<ref 
+```
+<ref bean="car"></ref>
+```
+此处有三个参数可选，分别为bean，local,parent，
+
