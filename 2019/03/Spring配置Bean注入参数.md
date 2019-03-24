@@ -14,5 +14,9 @@
 <ref bean="car"></ref>
 ```
 此处有三个参数可选，分别为bean，local,parent，bean可以引用同一容器或者父容器中的Bean，local只能引用同一容器中的Bean，parent可以引用父容器中的Bean
+# 3.内部Bean
+要使car Bean只被boss Bean引用不被其他Bean引用，可以使用内部Bean注入
+```
 
+```
 
