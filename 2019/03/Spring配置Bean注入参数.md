@@ -13,5 +13,6 @@
 ```
 <ref bean="car"></ref>
 ```
-此处有三个参数可选，分别为bean，local,parent，
+此处有三个参数可选，分别为bean，local,parent，bean可以引用同一容器或者父容器中的Bean，local只能引用同一容器中的Bean，parent可以引用父容器中的Bean
+
 
