@@ -108,5 +108,19 @@ Boss类的构造函数
 
 ```
 自动入参配置
-
+```
+	<bean id="boss1" class="com.smart.ditype.Boss">
+		<constructor-arg>
+			<value>John</value>
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="car" />
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="office" />
+		</constructor-arg>
+	</bean>
+	<bean id="office" class="com.smart.ditype.Office" />
+```
+注意：
 
