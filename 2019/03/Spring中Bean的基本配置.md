@@ -3,5 +3,9 @@
 Car类中有三个方法，分别为**setBrand(),setMaxSpeed(),setPrice()**
 **不使用p命名空间配置**
 ```
-
+	<bean id="car" class="com.smart.ditype.Car">
+		<property name="brand" value="红旗&amp;CA72"/>
+		<property name="maxSpeed" value="200"/>
+		<property name="price" value="20000.00"/>
+	</bean>
 ```
