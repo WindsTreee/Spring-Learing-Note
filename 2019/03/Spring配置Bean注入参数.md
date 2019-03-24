@@ -33,7 +33,9 @@
 ```
 # 5.级联属性
 ```
-
+	<bean id="boss3" class="com.smart.attr.Boss">
+		<property name="car.brand" value="奥迪" />
+	</bean>
 ```
-
+这里在Boss类中
 
