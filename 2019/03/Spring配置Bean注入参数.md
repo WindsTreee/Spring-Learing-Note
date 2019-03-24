@@ -17,6 +17,13 @@
 # 3.内部Bean
 要使car Bean只被boss Bean引用不被其他Bean引用，可以使用内部Bean注入
 ```
-
+	<bean id="boss" class="com.smart.attr.Boss">
+		<property name="car">
+			<bean class="com.smart.attr.Car">
+				<property name="maxSpeed" value="200"/>
+				<property name="price" value="20000"/>
+			</bean>
+		</property>
+	</bean>
 ```
 
