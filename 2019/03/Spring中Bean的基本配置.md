@@ -44,8 +44,13 @@ Car中有一个构造函数：
 这里Spring根据配置里面的类型自动匹配对应的构造方法
 
 **按索引匹配入参**
-假定Car类中有多个相同类型入参的构造方法
+假定Car类的构造方法有多个相同类型入参
 ```
-
+	public Car(String brand, String corp, double price) {
+		this.brand = brand;
+		this.corp = corp;
+		this.price = price;
+	}
 ```
+此时根据type就无法判断到底
 
