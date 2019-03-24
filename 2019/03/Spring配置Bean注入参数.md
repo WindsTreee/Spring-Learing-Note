@@ -3,8 +3,9 @@
 例子：
 ```
 	<bean id="car" class="com.smart.ditype.Car">
-		<property name="brand" value="红旗&amp;CA72"/>
-		<property name="maxSpeed" value="200"/>
-		<property name="price" value="20000.00"/>
+		<property name="brand">
+			<value>红旗&amp;CA72</value>
+		</property>
 	</bean>
 ```
+遇到XML特殊符合要进行转义处理或者加特殊标签
