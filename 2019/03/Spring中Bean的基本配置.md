@@ -52,5 +52,19 @@ Car中有一个构造函数：
 		this.price = price;
 	}
 ```
-此时根据type就无法判断到底
+此时根据type就无法判断到底哪个值匹配哪个入参，此时通过索引来确定
+```
+	<bean id="car3" class="com.smart.ditype.Car">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>红旗CA72</value>
+		</constructor-arg>
+		<constructor-arg index="1" type="java.lang.String">
+			<value>中国一汽</value>
+		</constructor-arg>
+		<constructor-arg index="2" type="int">
+			<value>200</value>
+		</constructor-arg>
+	</bean>
+```
+
 
