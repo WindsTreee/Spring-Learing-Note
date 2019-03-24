@@ -125,6 +125,6 @@ Boss类的构造函数
 	</bean>
 	<bean id="office" class="com.smart.ditype.Office" />
 ```
-**注意：这里采用的Bean必须进行声明**
+**注意：这里采用的Bean必须已经进行了初始化**
 
 # 3.工厂方法注入配置（略）
