@@ -82,7 +82,20 @@ Car有两个构造函数
 ```
 这里采用索引是不行的，第三个的值若为整数两个构造方法都符合条件，所以要采用联合入参
 ```
-
+	<bean id="car3" class="com.smart.ditype.Car">
+		<constructor-arg index="0" type="java.lang.String">
+			<value>红旗CA72</value>
+		</constructor-arg>
+		<constructor-arg index="1" type="java.lang.String">
+			<value>中国一汽</value>
+		</constructor-arg>
+		<constructor-arg index="2" type="int">
+			<value>200</value>
+		</constructor-arg>
+	</bean>
 ```
+这里引起歧义的是第三个入参，所以前两个的type可以去除
+
+**按类型匹配入参**
 
 
