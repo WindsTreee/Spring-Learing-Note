@@ -46,19 +46,19 @@ Car中有一个构造函数：
 **按索引匹配入参**
 假定Car类的构造方法有多个相同类型入参
 ```
-	public Car(String brand, String corp, double price) {
+	public Car(String brand, String corp, int maxSpeed) {
 		this.brand = brand;
 		this.corp = corp;
-		this.price = price;
+		this.maxSpeed = maxSpeed;
 	}
 ```
 此时根据type就无法判断到底哪个值匹配哪个入参，此时通过索引来确定
 ```
-	<bean id="car3" class="com.smart.ditype.Car">
-		<constructor-arg index="0" type="java.lang.String">
+	<bean id="car4" class="com.smart.ditype.Car">
+		<constructor-arg index="0">
 			<value>红旗CA72</value>
 		</constructor-arg>
-		<constructor-arg index="1" type="java.lang.String">
+		<constructor-arg index="1">
 			<value>中国一汽</value>
 		</constructor-arg>
 		<constructor-arg index="2" type="int">
