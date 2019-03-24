@@ -37,5 +37,6 @@
 		<property name="car.brand" value="奥迪" />
 	</bean>
 ```
-这里在Boss类中
+这里在Boss类中必须为创建一个Car的实例
+# 6.集合类型属性
 
