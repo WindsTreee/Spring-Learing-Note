@@ -66,5 +66,18 @@ Car中有一个构造函数：
 		</constructor-arg>
 	</bean>
 ```
-
+**按索引和类型匹配入参**
+Car有两个构造函数
+```
+	public Car(String brand, String corp, double price) {
+		this.brand = brand;
+		this.corp = corp;
+		this.price = price;
+	}
+	public Car(String brand, String corp, int maxSpeed) {
+		this.brand = brand;
+		this.corp = corp;
+		this.maxSpeed = maxSpeed;
+	}
+```
 
