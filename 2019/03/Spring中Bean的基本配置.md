@@ -17,4 +17,5 @@ Car类中有三个方法，分别为**setBrand(),setMaxSpeed(),setPrice()**
       p:maxSpeed="200"
       p:price="20000.00"/>
 ```
+Spring只会检查调用的类中是否有Setter方法，不检查是否有对应
 PS：
