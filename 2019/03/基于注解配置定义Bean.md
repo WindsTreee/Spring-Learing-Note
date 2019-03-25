@@ -16,3 +16,4 @@ public class UserDao {
 ```
 <context:component-scan base-package="com.smart.anno"/>
 ```
+也可以通过特定语句定义扫描具体的包
