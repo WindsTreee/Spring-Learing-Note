@@ -8,4 +8,4 @@ public class UserDao {
 ```
 <bean id="userDao" class="com.smart.anno.UserDao" />
 ```
-
+除了@Component外另外三个
