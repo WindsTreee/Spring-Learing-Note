@@ -12,3 +12,7 @@ public class UserDao {
 @Repository:用于对DAO实现类进行标注
 @Service:用于对Service实现类进行标注
 @Controller:用于对Controller实现了进行标注
+定义扫描的包以应用注解定义Bean的方式
+```
+<context:component-scan base-package="com.smart.anno"/>
+```
