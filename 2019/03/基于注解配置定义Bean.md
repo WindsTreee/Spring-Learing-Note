@@ -11,4 +11,4 @@ public class UserDao {
 除了@Component外另外三个与它基本等效的注解
 @Repository:用于对DAO实现类进行标注
 @Service:用于对Service实现类进行标注
-@Controller:
+@Controller:用于对Controller实现了进行标注
