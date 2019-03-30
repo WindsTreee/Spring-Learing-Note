@@ -10,4 +10,6 @@ ApplicationContext在初始化应用上下文时就实例化所有单实例的Be
 ApplicationContext有两个实现类：
 1.ClassPathXmlApplicationContext：从类路径夏加载配置文件，但是系统默认从resource目录下查找，所以xml文件必须放在resource目录下
 2.FileSystemXmlApplicationContext：从文件路径加载配置文件，即从绝对路径加载
-**ConfigurableApplicationContext**：继承于ApplicationContext，增加了refresh和close两个方法，使ApplicationContext具有启动，刷新和关闭上下文的能力
+### ConfigurableApplicationContext
+继承于ApplicationContext，增加了refresh和close两个方法，使ApplicationContext具有启动，刷新和关闭上下文的能力
+WebApplicationContext
