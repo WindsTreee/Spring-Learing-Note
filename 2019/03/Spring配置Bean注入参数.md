@@ -11,10 +11,11 @@
 **遇到XML特殊符合要进行转义处理或者加特殊标签**
 # 2.引用其他Bean
 ```
-<property namae="car">
-<ref bean="car"></ref>
+<property name="car">
+	<ref bean="car" />
 </property>
 ```
+把ref写在上面的标签也可以，即ref="car"
 此处有三个参数可选，分别为bean，local,parent，bean可以引用同一容器或者父容器中的Bean，local只能引用同一容器中的Bean，parent可以引用父容器中的Bean
 # 3.内部Bean
 要使car Bean只被boss Bean引用不被其他Bean引用，可以使用内部Bean注入
