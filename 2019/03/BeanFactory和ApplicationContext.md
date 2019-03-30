@@ -12,4 +12,5 @@ ApplicationContext有两个实现类：
 2.FileSystemXmlApplicationContext：从文件路径加载配置文件，即从绝对路径加载
 ### ConfigurableApplicationContext
 继承于ApplicationContext，增加了refresh和close两个方法，使ApplicationContext具有启动，刷新和关闭上下文的能力
-WebApplicationContext
+### WebApplicationContext
+专门用于Web应用，它为Bean添加了三个新的作用域：request，session和
