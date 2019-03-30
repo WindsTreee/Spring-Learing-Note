@@ -1,2 +1,4 @@
+# 4个注解
+### 1.
 ## restcontroller与controller区别
 @RestController为@Controller和@ResponseBody的结合，它可以为前端页面返回json数据，实现前后端分离，但它只能返回数据不能跳转到指定页面，而@Controller只能跳转到指定页面，不能返回数据
