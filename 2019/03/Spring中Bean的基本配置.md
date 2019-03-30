@@ -132,5 +132,8 @@ Boss类的构造函数
 
 # 使用外部属性配置文件
 ```
-
+    <!--外部属性配置文件路径-->
+    <context:property-placeholder location="classpath:db.properties"/>
+    <bean id="hello4" class="com.spring.beans.HelloWorld" p:name="${user}" />
 ```
+数据源配置通常这样使用
