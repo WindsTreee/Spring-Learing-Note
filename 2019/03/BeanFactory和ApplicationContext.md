@@ -13,4 +13,5 @@ ApplicationContext有两个实现类：
 ### ConfigurableApplicationContext
 继承于ApplicationContext，增加了refresh和close两个方法，使ApplicationContext具有启动，刷新和关闭上下文的能力
 ### WebApplicationContext
-专门用于Web应用，它为Bean添加了三个新的作用域：request，session和
+专门用于Web应用，它为Bean添加了三个新的作用域：request，session和global session
+它的初始化是在web.xml中完成Web容器监听器的配置
