@@ -6,3 +6,5 @@ BeanFactory是Spring框架的基础设施，面向Spring本身，是底层架构
 # 初始化
 BeanFactory在初始化容器时并未实例化Bean，直到第一次访问某个Bean时才实例化目标Bean
 ApplicationContext在初始化应用上下文时就实例化所有单实例的Bean，故而初始化时间会长一些
+# ApplicationContext
+ApplicationContext有两个实现类，
