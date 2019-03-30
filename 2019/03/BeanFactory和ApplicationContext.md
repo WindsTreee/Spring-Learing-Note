@@ -14,4 +14,4 @@ ApplicationContext有两个实现类：
 继承于ApplicationContext，增加了refresh和close两个方法，使ApplicationContext具有启动，刷新和关闭上下文的能力
 ### WebApplicationContext
 专门用于Web应用，它为Bean添加了三个新的作用域：request，session和global session
-它的初始化是在web.xml中完成Web容器监听器的配置或者声明一个自启动的Servlet即可，但是WebApplicationContext需要使用日志功能，可以采用Log4
+它的初始化是在web.xml中完成Web容器监听器的配置或者声明一个自启动的Servlet即可，但是WebApplicationContext需要使用日志功能，可以采用Log4J配置文件，放在WEB-INF/classes下，否则要在web.xml中指定Log4J配置文件的位置
