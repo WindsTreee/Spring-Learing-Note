@@ -18,7 +18,7 @@ Car类中有三个方法，分别为**setBrand(),setMaxSpeed(),setPrice()**
       p:price="20000.00"/>
 ```
 Spring只会检查调用的类中是否有Setter方法，不检查是否有对应该方法的成员变量
-JavaBean命名规范：Spring配置文件中<property>指定的属性名和Bean实现的
+JavaBean命名规范：Spring配置文件中<property>指定的属性名和Bean实现的Setter方法满足关系：xxx的属性对应setXxx()方法。为了防止命名错误等差错，
 PS：一般建议变量名满足前两个字母大小写一致，方便配置
 # 2.构造函数注入配置
 **按类型匹配入参**
