@@ -1,1 +1,1 @@
-采用JDK动态代理时，实现类不能继承
+采用JDK动态代理时，实现类不能继承接口，否则要设置proxy-target-class="true"，即采用cglib
