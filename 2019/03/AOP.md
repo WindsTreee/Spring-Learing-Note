@@ -4,6 +4,6 @@ AspectJ为各种增强类型提供的不同注解类
 @Before:前置增强
 @After:Final增强，不论方法异常还是正常都会执行
 @AfterReturning:后置增强，即只有方法正常时会执行
-@AfterThrowing:
-@Around:
+@AfterThrowing:抛出增强（异常通知）
+@Around:环绕增强
 @DeclareParents:
