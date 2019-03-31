@@ -3,4 +3,7 @@
 AspectJ为各种增强类型提供的不同注解类
 @Before:
 @After:
-@A
+@AfterReturning:
+@AfterThrowing:
+@Around:
+@DeclareParents:
