@@ -1,10 +1,10 @@
 **采用JDK动态代理时，实现类不能继承接口，否则要设置proxy-target-class="true"，即采用cglib实现动态代理，否则会报错找不到指定的bean**
 [参考链接](https://www.cnblogs.com/peak-c/p/6026945.html)
 AspectJ为各种增强类型提供的不同注解类
-@Before:前置增强
-@After:Final增强，不论方法异常还是正常都会执行
-@AfterReturning:后置增强，即只有方法正常时会执行
-@AfterThrowing:抛出增强（异常通知），它可以访问到异常对象，且可以指定特定的异常
-@Around:环绕增强，包含前置，后置，Final，抛出增强的功能
-@DeclareParents:引介增强
-切面优先级指定：@Order(1),值越小优先级越高
+**@Before**:前置增强
+**@After**:Final增强，不论方法异常还是正常都会执行
+**@AfterReturning**:后置增强，即只有方法正常时会执行
+**@AfterThrowing**:抛出增强（异常通知），它可以访问到异常对象，且可以指定特定的异常
+**@Around**:环绕增强，包含前置，后置，Final，抛出增强的功能
+**@DeclareParents**:引介增强
+**切面优先级指定**：@Order(1),值越小优先级越高
