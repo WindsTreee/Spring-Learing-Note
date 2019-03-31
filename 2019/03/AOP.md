@@ -5,5 +5,5 @@ AspectJ为各种增强类型提供的不同注解类
 @After:Final增强，不论方法异常还是正常都会执行
 @AfterReturning:后置增强，即只有方法正常时会执行
 @AfterThrowing:抛出增强（异常通知），它可以访问到异常对象，且可以指定特定的异常
-@Around:环绕增强，前置，后置，返回通知
+@Around:环绕增强，包含前置，后置，Final，抛出增强的功能
 @DeclareParents:引介增强
