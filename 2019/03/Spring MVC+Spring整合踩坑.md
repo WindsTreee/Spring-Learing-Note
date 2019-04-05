@@ -10,3 +10,5 @@
 2.一个web.xml可以配置多个DispatcherServlet，通过<servlet-mapping>的配置让每个DispatcherServlet处理不同的请求（通过不同的name标识不同的DispatcherServlet）**
 ## 2.DispatcherServlet默认加载的是位于/WEB-INF/<servelt-Name>-servlet.xml的Spring配置文件
 如果要自己指定可以在声明Servlet的时候通过<init-param>指定
+
+## 
