@@ -12,7 +12,7 @@
 如果要自己指定可以在声明Servlet的时候通过<init-param>指定
 
 ## 3.web.xml中若版本是2.3则不支持el表达式，即${}这样的代码无法使用，可以在Project Structure的Module中删除web.xml然后重新添加一个，这样可以选择版本号，或者直接修改配置文件使idea建立web项目时创建的web.xml版本为指定版本
-
+[修改web.xml配置文件](https://blog.csdn.net/senAr59/article/details/80538821)
 
 ## 4.前端传递到后端中文乱码问题：因为SpringMVC默认的编码为ISO-8859-1，所以会乱码，最好的解决方式是在web.xml中添加编码过滤器，把所有的数据编码转化成UTF-8
 ```
