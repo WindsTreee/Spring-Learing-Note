@@ -33,4 +33,4 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 ```
-## 5.@RequestMapping在类处定义的URL是相对于Web应用的部署路径，在方法处定义的URL则是相对于类定义处的URL，如果类处没有定义URL，方法处定义的URL则是直接相对于根路径的
+## 5.@RequestMapping在类处定义的URL是相对于Web应用的部署路径，在方法处定义的URL则是相对于类定义处的URL，如果类处没有定义URL，方法处定义的URL则是直接相对于根路径的。@RequestMapping还支持Ant风格
