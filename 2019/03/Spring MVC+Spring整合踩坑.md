@@ -33,4 +33,4 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 ```
-## 5.
+## 5.@RequestMapping在类处定义的URL是相对于Web应用的部署
