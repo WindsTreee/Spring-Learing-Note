@@ -11,6 +11,7 @@
 ## 2.DispatcherServlet默认加载的是位于/WEB-INF/<servelt-Name>-servlet.xml的Spring配置文件
 如果要自己指定可以在声明Servlet的时候通过<init-param>指定
 
-## 3.web.xml中若版本是2.3则不支持el表达式，即${}这样的代码无法使用，可以在Project Structure的Module中删除web.xml然后重新添加一个，这样可以选择版本号，或者直接修改配置文件使idea建立
+## 3.web.xml中若版本是2.3则不支持el表达式，即${}这样的代码无法使用，可以在Project Structure的Module中删除web.xml然后重新添加一个，这样可以选择版本号，或者直接修改配置文件使idea建立web项目时创建的web.xml版本为指定版本
 
-## 
+
+## 4.前端传递到后端中文乱码问题：因为SpringMVC默认的编码为ISO-8859-1，所以会乱码，最好的解决方式
