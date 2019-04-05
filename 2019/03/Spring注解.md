@@ -5,4 +5,4 @@
 ### 4.@Controller：标识表现层组件
 ### 理论上4个注解可以混用，但是为了代码的可读性实际中还是分开使用
 ## restcontroller与controller区别
-@RestController为@Controller和@ResponseBody的结合，它可以为前端页面返回json数据，实现前后端分离，但它只能返回数据不能跳转到指定页面，而@Controller只能跳转到指定页面，不能返回数据
+@RestController为@Controller和@ResponseBody的结合，它可以为前端页面返回json数据，实现前后端分离，但它只能返回数据不能跳转到指定页面，而@Controller只能跳转到指定页面，并传给其指定的参数，不能只返回数据
