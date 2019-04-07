@@ -15,6 +15,7 @@
 [修改web.xml配置文件](https://blog.csdn.net/senAr59/article/details/80538821)
 
 ## 4.前端传递到后端中文乱码问题：因为SpringMVC默认的编码为ISO-8859-1，所以会乱码，最好的解决方式是在web.xml中添加编码过滤器，把所有的数据编码转化成UTF-8
+[不同编码错误格式](https://blog.csdn.net/o_nianchenzi_o/article/details/88645532)
 ```
     <filter>
         <filter-name>characterEncodingFilter</filter-name>
