@@ -35,4 +35,11 @@
 3号窗口 卖票-------&gt;3
 3号窗口 卖票-------&gt;2
 3号窗口 卖票-------&gt;1
-</pre><p><br></p><p>继承Runnable：</p><p>zhu</p><p><br></p><p><br></p>
+</pre><p><br></p><p>继承Runnable：</p><pre class="ql-syntax" spellcheck="false">RunableDemo r=new RunableDemo();
+Thread t4 = new Thread(r,"4号窗口");
+Thread t5 = new Thread(r,"5号窗口");
+Thread t6 = new Thread(r,"6号窗口");
+t4.start();
+t5.start();
+t6.start();
+</pre><p><br></p><p>这里创建Runnable的类必须这样创建，如果是</p><p>new Thread(new RunableDemo())</p><p><br></p><p><br></p>
