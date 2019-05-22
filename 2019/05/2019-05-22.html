@@ -43,7 +43,7 @@ t4.start();
 t5.start();
 t6.start();
 </pre><p>PS：</p><pre class="ql-syntax" spellcheck="false">new Thread(r,"4号窗口");
-</pre><p>在这样</p><p>这里创建Runnable的类必须这样创建，如果是</p><pre class="ql-syntax" spellcheck="false">new Thread(new RunableDemo())
+</pre><p>这样的为线程命名的方式只有Runnable接口实现方式才可以，如果是继承Thread是不能这样命名的。</p><p>这里创建Runnable的类必须这样创建，如果是</p><pre class="ql-syntax" spellcheck="false">new Thread(new RunableDemo())
 </pre><p>这样创建结果和之前的是一样的，因为创建了3个不同的RunDemo类</p><p>正常创建了RunDemo之后，三个线程虽然不同但是公用同一个RunDemo中代码块，所以三个线程实际上在执行同一个任务，<strong>注意：RunDemo中的所有代码都被所有线程共享</strong></p><pre class="ql-syntax" spellcheck="false">4号窗口 卖票-------&gt;10
 4号窗口 卖票-------&gt;9
 4号窗口 卖票-------&gt;8
