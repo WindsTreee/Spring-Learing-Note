@@ -1,11 +1,11 @@
-<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-ce173615-4d56-4549-bc3d-9b007da856e4"></attachment><p>昨天的Dao层注入报错是因为在mapper的映射文件中namespace选择了整个dao包，但这里应该选择单个具体的mapper类</p><p>@Service注入报错是因为配置文件的命名空间还是dao包的地址</p><p>属性名与列名的转换问题：</p><p>如果entity类中提供了构造方法，那么查询得到的表项会根据构造方法的入参顺序让各列入参构造类，这个时候如果添加了别名的设定使列名与属性名对应可以达到对应列对应对应属性的目的，如果没有构造方法，则必须使列名与属性名对应，否则不对应的属性值为空</p><p>线程相关：</p><p>start()和run()：start()是利用新的线程调用run()方法，run()则是利用现有线程调用new Thread(x)中的run()方法，即没有开辟新的线程。</p><pre class="ql-syntax" spellcheck="false">继承Thread和实现Runnable接口的区别：
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-ce173615-4d56-4549-bc3d-9b007da856e4"></attachment><p>昨天的Dao层注入报错是因为在mapper的映射文件中namespace选择了整个dao包，但这里应该选择单个具体的mapper类</p><p>@Service注入报错是因为配置文件的命名空间还是dao包的地址</p><p>属性名与列名的转换问题：</p><p>如果entity类中提供了构造方法，那么查询得到的表项会根据构造方法的入参顺序让各列入参构造类，这个时候如果添加了别名的设定使列名与属性名对应可以达到对应列对应对应属性的目的，如果没有构造方法，则必须使列名与属性名对应，否则不对应的属性值为空</p><p><strong>线程相关</strong>：</p><p>start()和run()：start()是利用新的线程调用run()方法，run()则是利用现有线程调用new Thread(x)中的run()方法，即没有开辟新的线程。</p><p><br></p><pre class="ql-syntax" spellcheck="false">继承Thread和实现Runnable接口的区别：
 创建方式区别：继承Thread：Thread t1=new ThreadDemo(),即new一个继承类  Runnable:MyThread1 mt = new MyThread1();
          Thread t1 = new Thread(mt,"一号窗口");
 
-</pre><p>线程运作方式区别：继承Thread类：</p><pre class="ql-syntax" spellcheck="false"> ThreadDemo t1 = new ThreadDemo("1号窗口");
+</pre><p>线程运作方式区别：继承Thread类：</p><p><br></p><pre class="ql-syntax" spellcheck="false"> ThreadDemo t1 = new ThreadDemo("1号窗口");
         ThreadDemo t2 = new ThreadDemo("2号窗口");
         ThreadDemo t3 = new ThreadDemo("3号窗口");
-</pre><p><br></p><p>这样的方式是new了三个类，每个类卖10张票，最后结果是各管各卖</p><pre class="ql-syntax" spellcheck="false">2号窗口 卖票-------&gt;10
+</pre><p><br></p><p>这样的方式是new了三个类，每个类卖10张票，最后结果是各管各卖</p><p><br></p><pre class="ql-syntax" spellcheck="false">2号窗口 卖票-------&gt;10
 2号窗口 卖票-------&gt;9
 2号窗口 卖票-------&gt;8
 2号窗口 卖票-------&gt;7
@@ -35,16 +35,16 @@
 3号窗口 卖票-------&gt;3
 3号窗口 卖票-------&gt;2
 3号窗口 卖票-------&gt;1
-</pre><p><br></p><p>继承Runnable：</p><pre class="ql-syntax" spellcheck="false">RunableDemo r=new RunableDemo();
+</pre><p><br></p><p>继承Runnable：</p><p><br></p><pre class="ql-syntax" spellcheck="false">RunableDemo r=new RunableDemo();
 Thread t4 = new Thread(r,"4号窗口");
 Thread t5 = new Thread(r,"5号窗口");
 Thread t6 = new Thread(r,"6号窗口");
 t4.start();
 t5.start();
 t6.start();
-</pre><p>PS：</p><pre class="ql-syntax" spellcheck="false">new Thread(r,"4号窗口");
-</pre><p>这样的为线程命名的方式只有Runnable接口实现方式才可以，如果是继承Thread是不能这样命名的。</p><p>这里创建Runnable的类必须这样创建，如果是</p><pre class="ql-syntax" spellcheck="false">new Thread(new RunableDemo())
-</pre><p>这样创建结果和之前的是一样的，因为创建了3个不同的RunDemo类</p><p>正常创建了RunDemo之后，三个线程虽然不同但是公用同一个RunDemo中代码块，所以三个线程实际上在执行同一个任务，<strong>注意：RunDemo中的所有代码都被所有线程共享</strong></p><pre class="ql-syntax" spellcheck="false">4号窗口 卖票-------&gt;10
+</pre><p>PS：</p><p><br></p><pre class="ql-syntax" spellcheck="false">new Thread(r,"4号窗口");
+</pre><p>这样的为线程命名的方式只有Runnable接口实现方式才可以，如果是继承Thread是不能这样命名的。</p><p>这里创建Runnable的类必须这样创建，如果是</p><p><br></p><pre class="ql-syntax" spellcheck="false">new Thread(new RunableDemo())
+</pre><p>这样创建结果和之前的是一样的，因为创建了3个不同的RunDemo类</p><p>正常创建了RunDemo之后，三个线程虽然不同但是公用同一个RunDemo中代码块，所以三个线程实际上在执行同一个任务，<strong>注意：RunDemo中的所有代码都被所有线程共享</strong></p><p><br></p><pre class="ql-syntax" spellcheck="false">4号窗口 卖票-------&gt;10
 4号窗口 卖票-------&gt;9
 4号窗口 卖票-------&gt;8
 4号窗口 卖票-------&gt;7
