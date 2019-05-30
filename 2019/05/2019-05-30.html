@@ -12,4 +12,11 @@ class RegExpTest {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;}
 }
-</pre><p><br></p><p><br></p><p><br></p>
+</pre><p><br></p><p>Java中可以使用带标签的break跳出多重循环，例如：</p><pre class="ql-syntax" spellcheck="false">flag:
+    for(int i=0;i&lt;5;i++){
+        for(int j=0;j&lt;5;j++){
+            count++;
+            break flag;
+        }
+    }
+</pre><p>这样可以跳出循环到flag</p><p><br></p>
