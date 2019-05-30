@@ -19,10 +19,8 @@ class RegExpTest {
             break flag;
         }
     }
-</pre><p>这样可以跳出循环到flag，但是不建议使用，和C的goto一样，容易产生bug且不易于调试，continue也支持带标签。参考<a href="https://www.cnblogs.com/wpzy2311/p/4222810.html" target="_blank">链接</a></p><p>在Java SE5之后</p><pre class="ql-syntax" spellcheck="false">Integer i =&nbsp;new&nbsp;Integer(10);
-
-Integer i =&nbsp;10;
-</pre><p>这两个语句的含义是一样的，第二个语句执行时Java会进行自动装箱，创建对应的Integer对象</p><p>装箱过程是通过调用包装器的valueOf方法实现的，而拆箱过程是通过调用包装器的 xxxValue方法实现的。（xxx代表对应的基本数据类型）</p><p>而下面这段代码</p><pre class="ql-syntax" spellcheck="false">Integer i1 = 100;
+</pre><p>这样可以跳出循环到flag，但是不建议使用，和C的goto一样，容易产生bug且不易于调试，continue也支持带标签。参考<a href="https://www.cnblogs.com/wpzy2311/p/4222810.html" target="_blank">链接</a></p><pre class="ql-syntax" spellcheck="false">
+</pre><p><br></p><p>装箱过程是通过调用包装器的valueOf方法实现的，而拆箱过程是通过调用包装器的 xxxValue方法实现的。（xxx代表对应的基本数据类型）</p><p>而下面这段代码</p><pre class="ql-syntax" spellcheck="false">Integer i1 = 100;
 Integer i2 = 100;
 Integer i3 = 200;
 Integer i4 = 200;
@@ -36,4 +34,7 @@ System.out.println(i3==i4);
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(i1==i2);
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(i3==i4);
-</pre><p>输出为两个<strong>false，因为Double的valueOf和Integer的不同</strong></p><p><strong style="color: rgb(255, 0, 0);">Integer、Short、Byte、Character、Long这几个类的valueOf方法的实现是类似的。</strong></p><p><strong style="color: rgb(255, 0, 0);">Double、Float的valueOf方法的实现是类似的。</strong></p><p><br></p>
+</pre><p>输出为两个<strong>false，因为Double的valueOf和Integer的不同</strong></p><p><strong style="color: rgb(255, 0, 0);">Integer、Short、Byte、Character、Long这几个类的valueOf方法的实现是类似的。</strong></p><p><strong style="color: rgb(255, 0, 0);">Double、Float的valueOf方法的实现是类似的。</strong></p><p><br></p><pre class="ql-syntax" spellcheck="false">Integer i =&nbsp;new&nbsp;Integer(10);
+
+Integer i =&nbsp;10;
+</pre><p>这两个都能够创立Integer</p><p><br></p>
