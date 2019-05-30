@@ -37,4 +37,4 @@ System.out.println(i3==i4);
 </pre><p>输出为两个<strong>false，因为Double的valueOf和Integer的不同</strong></p><p><strong style="color: rgb(255, 0, 0);">Integer、Short、Byte、Character、Long这几个类的valueOf方法的实现是类似的。</strong></p><p><strong style="color: rgb(255, 0, 0);">Double、Float的valueOf方法的实现是类似的。</strong></p><p><br></p><pre class="ql-syntax" spellcheck="false">Integer i =&nbsp;new&nbsp;Integer(10);
 
 Integer i =&nbsp;10;
-</pre><p>这两个都能够创立Integer</p><p><br></p>
+</pre><p>这两个都能够创立Integer对象，第二个语句实现了自动装箱，但是如果是自动装箱，在[-128,127]之间的值是直接从IntegerCache中拿已经创建好的对象的，s</p><p><br></p>
