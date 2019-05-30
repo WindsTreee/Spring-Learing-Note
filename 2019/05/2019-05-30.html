@@ -1,6 +1,6 @@
-<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-a123af77-2079-4b92-bb97-5bbb5f1ad7e7"></attachment><p><a href="https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&amp;tqId=11186&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank"><strong>丑数</strong></a></p><p><a href="https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&amp;tqId=11187&amp;tPage=2&amp;rp=2&amp;ru=%2Fta%2Fcoding-interviews&amp;qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking" target="_blank"><strong>第一次只出现一次的字符</strong></a></p><p>Java中允许存在同名方法，但同名方法之间的参数必须不同。参数不同指形参的类型两个方法的形参类型不可完全相同，如果形参类型相同，那么入参顺序必须不同。例如这样：</p><pre class="ql-syntax" spellcheck="false">public  String PrintMinNumber(int [] numbers,int a) 
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-a123af77-2079-4b92-bb97-5bbb5f1ad7e7"></attachment><p><a href="https://www.nowcoder.com/practice/6aa9e04fc3794f68acf8778237ba065b?tpId=13&amp;tqId=11186&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank"><strong>丑数</strong></a></p><p><a href="https://www.nowcoder.com/practice/1c82e8cf713b4bbeb2a5b31cf5b0417c?tpId=13&amp;tqId=11187&amp;tPage=2&amp;rp=2&amp;ru=%2Fta%2Fcoding-interviews&amp;qru=%2Fta%2Fcoding-interviews%2Fquestion-ranking" target="_blank"><strong>第一次只出现一次的字符</strong></a></p><p><a href="https://www.nowcoder.com/practice/6ab1d9a29e88450685099d45c9e31e46?tpId=13&amp;tqId=11189&amp;tPage=2&amp;rp=2&amp;ru=/ta/coding-interviews&amp;qru=/ta/coding-interviews/question-ranking" target="_blank"><strong>两个链表的第一个公共节点</strong></a></p><p>Java中允许存在同名方法，但同名方法之间的参数必须不同。参数不同指形参的类型两个方法的形参类型不可完全相同，如果形参类型相同，那么入参顺序必须不同。例如这样：</p><p><br></p><pre class="ql-syntax" spellcheck="false">public  String PrintMinNumber(int [] numbers,int a) 
 public String PrintMinNumber(int a,int [] numbers)
-</pre><p><strong>要么参数类型不同，如果参数类型相同入参顺序必须不同，这体现了java的多态</strong></p><p>Math.min和Math.max都只能接受两个参数</p><p><strong>Java中支持正则表达式的操作：</strong>String类本身提供了支持正则表达式的方法，如matches()等。Java中还有Pattern类来表示正则表达式对象。例如：</p><pre class="ql-syntax" spellcheck="false">import java.util.regex.Matcher;
+</pre><p><strong>要么参数类型不同，如果参数类型相同入参顺序必须不同，这体现了java的多态</strong></p><p>Math.min和Math.max都只能接受两个参数</p><p><strong>Java中支持正则表达式的操作：</strong>String类本身提供了支持正则表达式的方法，如matches()等。Java中还有Pattern类来表示正则表达式对象。例如：</p><p><br></p><pre class="ql-syntax" spellcheck="false">import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 class RegExpTest {
 &nbsp;&nbsp;&nbsp;&nbsp;public static void main(String[] args) {
@@ -12,29 +12,28 @@ class RegExpTest {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;&nbsp;&nbsp;}
 }
-</pre><p><br></p><p>Java中可以使用带标签的break跳出多重循环，例如：</p><pre class="ql-syntax" spellcheck="false">flag:
+</pre><p><br></p><p>Java中可以使用带标签的break跳出多重循环，例如：</p><p><br></p><pre class="ql-syntax" spellcheck="false">flag:
     for(int i=0;i&lt;5;i++){
         for(int j=0;j&lt;5;j++){
             count++;
             break flag;
         }
     }
-</pre><p>这样可以跳出循环到flag，但是不建议使用，和C的goto一样，容易产生bug且不易于调试，continue也支持带标签。参考<a href="https://www.cnblogs.com/wpzy2311/p/4222810.html" target="_blank">链接</a></p><pre class="ql-syntax" spellcheck="false">
-</pre><p><br></p><p>装箱过程是通过调用包装器的valueOf方法实现的，而拆箱过程是通过调用包装器的 xxxValue方法实现的。（xxx代表对应的基本数据类型）</p><p>而下面这段代码</p><pre class="ql-syntax" spellcheck="false">Integer i1 = 100;
+</pre><p>这样可以跳出循环到flag，但是不建议使用，和C的goto一样，容易产生bug且不易于调试，continue也支持带标签。参考<a href="https://www.cnblogs.com/wpzy2311/p/4222810.html" target="_blank">链接</a></p><p><br></p><p><br></p><p>装箱过程是通过调用包装器的valueOf方法实现的，而拆箱过程是通过调用包装器的 xxxValue方法实现的。（xxx代表对应的基本数据类型）</p><p>而下面这段代码</p><p><br></p><pre class="ql-syntax" spellcheck="false">Integer i1 = 100;
 Integer i2 = 100;
 Integer i3 = 200;
 Integer i4 = 200;
 
 System.out.println(i1==i2);
 System.out.println(i3==i4);
-</pre><p>第一个会输出<strong>true</strong>，第二个会输出<strong>false</strong>，根本原因在于Integer的valueOf方法中如果创建的值在[-128,127]之间对象指向的是IntegerCache.cache中已经存在的对象的引用，否则创建新的对象。</p><p>但是如果是double类型的变量：</p><pre class="ql-syntax" spellcheck="false">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Double i1 =&nbsp;100.0;
+</pre><p>第一个会输出<strong>true</strong>，第二个会输出<strong>false</strong>，根本原因在于Integer的valueOf方法中如果创建的值在[-128,127]之间对象指向的是IntegerCache.cache中已经存在的对象的引用，否则创建新的对象。</p><p>但是如果是double类型的变量：</p><p><br></p><pre class="ql-syntax" spellcheck="false">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Double i1 =&nbsp;100.0;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double i2 =&nbsp;100.0;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double i3 =&nbsp;200.0;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double i4 =&nbsp;200.0;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(i1==i2);
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(i3==i4);
-</pre><p>输出为两个<strong>false，因为Double的valueOf和Integer的不同</strong></p><p><strong style="color: rgb(255, 0, 0);">Integer、Short、Byte、Character、Long这几个类的valueOf方法的实现是类似的。</strong></p><p><strong style="color: rgb(255, 0, 0);">Double、Float的valueOf方法的实现是类似的。</strong></p><p><br></p><pre class="ql-syntax" spellcheck="false">Integer i1 =&nbsp;new&nbsp;Integer(10);
+</pre><p>输出为两个<strong>false，因为Double的valueOf和Integer的不同</strong></p><p><strong style="color: rgb(255, 0, 0);">Integer、Short、Byte、Character、Long这几个类的valueOf方法的实现是类似的。</strong></p><p><strong style="color: rgb(255, 0, 0);">Double、Float的valueOf方法的实现是类似的。</strong></p><p><br></p><p><br></p><pre class="ql-syntax" spellcheck="false">Integer i1 =&nbsp;new&nbsp;Integer(10);
 
 Integer i2 =&nbsp;10;
 </pre><p>这两个都能够创立Integer对象，第二个语句实现了自动装箱，但是如果是自动装箱，在[-128,127]之间的值是直接从IntegerCache中拿已经创建好的对象的，所以如果比较i1和i2结果为false</p><p><br></p>
