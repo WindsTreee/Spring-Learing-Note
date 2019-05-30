@@ -29,4 +29,4 @@ Integer i4 = 200;
 
 System.out.println(i1==i2);
 System.out.println(i3==i4);
-</pre><p>第一个会输出true，第二个会输出false，根本原因在于Integer的valueOf方法中如果创建的值在</p><p><br></p>
+</pre><p>第一个会输出true，第二个会输出false，根本原因在于Integer的valueOf方法中如果创建的值在[-128,127]之间对象指向的是IntegerCache.cache中已经存在的对象的引用，否则创建新的对象</p><p><br></p><p><br></p>
