@@ -29,4 +29,11 @@ Integer i4 = 200;
 
 System.out.println(i1==i2);
 System.out.println(i3==i4);
-</pre><p>第一个会输出<strong>true</strong>，第二个会输出<strong>false</strong>，根本原因在于Integer的valueOf方法中如果创建的值在[-128,127]之间对象指向的是IntegerCache.cache中已经存在的对象的引用，否则创建新的对象。</p><p>但是如果是dou</p><p><br></p>
+</pre><p>第一个会输出<strong>true</strong>，第二个会输出<strong>false</strong>，根本原因在于Integer的valueOf方法中如果创建的值在[-128,127]之间对象指向的是IntegerCache.cache中已经存在的对象的引用，否则创建新的对象。</p><p>但是如果是double类型的变量：</p><pre class="ql-syntax" spellcheck="false">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Double i1 =&nbsp;100.0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double i2 =&nbsp;100.0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double i3 =&nbsp;200.0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Double i4 =&nbsp;200.0;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(i1==i2);
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;System.out.println(i3==i4);
+</pre><p>输出为两个<strong>false，因为Double的valueOf和Integer的不同</strong></p><p><span style="color: rgb(255, 0, 0);">Integer、Short、Byte、Character、Long这几个类的valueOf方法的实现是类似的。</span></p><p><br></p><p><br></p>
