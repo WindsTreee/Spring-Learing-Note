@@ -37,4 +37,4 @@ System.out.println(i3==i4);
 
 Integer i2 =&nbsp;10;
 </pre><p>这两个都能够创立Integer对象，第二个语句实现了自动装箱，但是如果是自动装箱，在[-128,127]之间的值是直接从IntegerCache中拿已经创建好的对象的，所以如果比较i1和i2结果为false</p><p><strong>有序&lt;-&gt;二分</strong></p><p><span style="color: rgb(51, 51, 51);">str.getBytes("GBK")是把字符串用GBK编码去解析，如果字符串本身就是GBK编码的，等于以这种方式进行解码，然后采用再创建新的字符串</span></p><pre class="ql-syntax" spellcheck="false">tempStr = new String(str.getBytes(“ISO-8859-1″), “GBK”);
-</pre><p>这段代码的意思即把str以ISO编码解析，然后再转换为GBK编码的字符串</p><p><br></p><p>String是字符串常量，不可变，而StringBuffer和StringBuilder均为字符串变量，</p><p><br></p>
+</pre><p>这段代码的意思即把str以ISO编码解析，然后再转换为GBK编码的字符串</p><p><br></p><p>String是字符串常量，不可变，而StringBuffer和StringBuilder均为字符串变量，可变</p><p><strong style="color: rgb(255, 0, 0);">在线程安全上，StringBuilder是线程不安全的，而StringBuffer是线程安全的</strong></p><p><br></p>
