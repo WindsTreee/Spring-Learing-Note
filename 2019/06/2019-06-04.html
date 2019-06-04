@@ -1,15 +1,15 @@
-<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-849f4345-5ef1-4e3f-a489-ddeef43b798a"></attachment><p>LinkedHashmap就是LinkedList和Hashmap的结合，因为Hashmap访问时不是按照元素放入的顺序访问的。它是<strong>非线程安全的</strong>。 参考<a href="https://www.cnblogs.com/xiaoxi/p/6170590.html" target="_blank">链接</a></p><p>LinkedHashmap和LinkedList都是双向链表</p><p>LinkedHashmap可以用于实现LRU缓存(未实践)</p><p><br></p><p>Hashmap的keySet方法可以返回hashmap中所有的key值，返回类型是Set&lt;键的类型&gt;，所以可以使用<strong>keySet.iterator()</strong>进行遍历访问</p><p><br></p><p>迭代器的.next()方法返回的是当前迭代的元素，并把迭代的游标向后移，所以要访问具体的值要使用.next方法</p><p>在迭代器迭代过程中不能对集合进行写删除等会改变元素值或结构的操作，否则会报ConcurrentModificationException错误</p><p>迭代器<strong style="color: rgb(79, 79, 79);">Iterator是一个接口，可以看作是所以迭代对象的母接口，具体如何迭代由它实现</strong></p><pre class="ql-syntax" spellcheck="false">Iterator i=map.keySet().iterator();
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-849f4345-5ef1-4e3f-a489-ddeef43b798a"></attachment><p><br></p><p>LinkedHashmap就是LinkedList和Hashmap的结合，因为Hashmap访问时不是按照元素放入的顺序访问的。它是<strong>非线程安全的</strong>。 参考<a href="https://www.cnblogs.com/xiaoxi/p/6170590.html" target="_blank">链接</a></p><p>LinkedHashmap和LinkedList都是双向链表</p><p>LinkedHashmap可以用于实现LRU缓存(未实践)</p><p><br></p><p>Hashmap的keySet方法可以返回hashmap中所有的key值，返回类型是Set&lt;键的类型&gt;，所以可以使用<strong>keySet.iterator()</strong>进行遍历访问</p><p><br></p><p>迭代器的.next()方法返回的是当前迭代的元素，并把迭代的游标向后移，所以要访问具体的值要使用.next方法</p><p>在迭代器迭代过程中不能对集合进行写删除等会改变元素值或结构的操作，否则会报ConcurrentModificationException错误</p><p>迭代器<strong style="color: rgb(79, 79, 79);">Iterator是一个接口，可以看作是所以迭代对象的母接口，具体如何迭代由它实现</strong></p><p><br></p><pre class="ql-syntax" spellcheck="false">Iterator i=map.keySet().iterator();
 while (i.hasNext()){
     System.out.println(i.next());;
 }
-</pre><p><br></p><p><strong style="color: rgb(79, 79, 79);">Iterable也是一个接口，实现了这个接口的集合对象支持迭代，实现了这个接口的就可以用foreach访问集合元素。</strong></p><p>一般都是实现Iterable接口而不实现Iterator接口，很多类实现了Iterable接口之后可以调用iterator方法。 参考<a href="https://perfy315.iteye.com/blog/1459201" target="_blank">链接</a></p><p>Hashmap的foreach遍历：</p><pre class="ql-syntax" spellcheck="false">//采用lambad表达式
+</pre><p><br></p><p><strong style="color: rgb(79, 79, 79);">Iterable也是一个接口，实现了这个接口的集合对象支持迭代，实现了这个接口的就可以用foreach访问集合元素。</strong></p><p>一般都是实现Iterable接口而不实现Iterator接口，很多类实现了Iterable接口之后可以调用iterator方法。 参考<a href="https://perfy315.iteye.com/blog/1459201" target="_blank">链接</a></p><p>Hashmap的foreach遍历：</p><p><br></p><pre class="ql-syntax" spellcheck="false">//采用lambad表达式
 map.forEach((k,v)-&gt;{
     System.out.println(v);
 });
 for (Map.Entry&lt;String, Integer&gt; entry : items.entrySet()) {
     System.out.println("Item : " + entry.getKey() + " Count : " + entry.getValue());
 }
-</pre><p><br></p><p>普通集合的foreach：</p><pre class="ql-syntax" spellcheck="false">        for (String string : list) {
+</pre><p><br></p><p>普通集合的foreach：</p><p><br></p><pre class="ql-syntax" spellcheck="false">        for (String string : list) {
             System.out.println(string);
         }
 </pre><p><br></p><p>Hashmap的keyset返回的是Iterator&lt;&gt;的key集合，要访问具体value的时候还要调用getEntry方法进行循环，即循环两次。entrySet返回的直接是Entry&lt;,&gt;的迭代，不用进一步循环</p><p>Hashmap三种遍历方式参考<a href="https://blog.csdn.net/gaojiajie333/article/details/79353774" target="_blank">链接</a></p><p><br></p>
