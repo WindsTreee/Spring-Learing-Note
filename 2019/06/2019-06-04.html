@@ -8,4 +8,4 @@ while (i.hasNext()){
 </pre><p>普通集合的foreach：</p><pre class="ql-syntax" spellcheck="false">        for (String string : list) {
             System.out.println(string);
         }
-</pre><p><br></p><p>Hashmap的keyset返回的是Iterator&lt;&gt;的key集合，要访问具体</p><p><br></p>
+</pre><p><br></p><p>Hashmap的keyset返回的是Iterator&lt;&gt;的key集合，要访问具体value的时候还要调用getEntry方法进行循环，即循环两次。entrySet</p><p><br></p>
