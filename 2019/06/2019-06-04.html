@@ -2,7 +2,7 @@
 while (i.hasNext()){
     System.out.println(i.next());;
 }
-</pre><p><br></p><p><strong style="color: rgb(79, 79, 79);">Iterable也是一个接口，实现了这个接口的集合对象支持迭代，实现了这个接口的就可以用foreach访问集合元素。</strong></p><p>一般都是实现Iterable接口而不实现Iterator接口</p><p>Hashmap的foreach遍历：</p><pre class="ql-syntax" spellcheck="false">map.forEach((k,v)-&gt;{
+</pre><p><br></p><p><strong style="color: rgb(79, 79, 79);">Iterable也是一个接口，实现了这个接口的集合对象支持迭代，实现了这个接口的就可以用foreach访问集合元素。</strong></p><p>一般都是实现Iterable接口而不实现Iterator接口，很多类实现了Iterable接口之后可以调用iterator方法。 参考<a href="https://perfy315.iteye.com/blog/1459201" target="_blank">链接</a></p><p>Hashmap的foreach遍历：</p><pre class="ql-syntax" spellcheck="false">map.forEach((k,v)-&gt;{
     System.out.println(v);
 });
 </pre><p>普通集合的foreach：</p><pre class="ql-syntax" spellcheck="false">        for (String string : list) {
