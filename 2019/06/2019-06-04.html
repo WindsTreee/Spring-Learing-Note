@@ -2,10 +2,14 @@
 while (i.hasNext()){
     System.out.println(i.next());;
 }
-</pre><p><br></p><p><strong style="color: rgb(79, 79, 79);">Iterable也是一个接口，实现了这个接口的集合对象支持迭代，实现了这个接口的就可以用foreach访问集合元素。</strong></p><p>一般都是实现Iterable接口而不实现Iterator接口，很多类实现了Iterable接口之后可以调用iterator方法。 参考<a href="https://perfy315.iteye.com/blog/1459201" target="_blank">链接</a></p><p>Hashmap的foreach遍历：</p><pre class="ql-syntax" spellcheck="false">map.forEach((k,v)-&gt;{
+</pre><p><br></p><p><strong style="color: rgb(79, 79, 79);">Iterable也是一个接口，实现了这个接口的集合对象支持迭代，实现了这个接口的就可以用foreach访问集合元素。</strong></p><p>一般都是实现Iterable接口而不实现Iterator接口，很多类实现了Iterable接口之后可以调用iterator方法。 参考<a href="https://perfy315.iteye.com/blog/1459201" target="_blank">链接</a></p><p>Hashmap的foreach遍历：</p><pre class="ql-syntax" spellcheck="false">//cai'yong
+map.forEach((k,v)-&gt;{
     System.out.println(v);
 });
-</pre><p>普通集合的foreach：</p><pre class="ql-syntax" spellcheck="false">        for (String string : list) {
+for (Map.Entry&lt;String, Integer&gt; entry : items.entrySet()) {
+    System.out.println("Item : " + entry.getKey() + " Count : " + entry.getValue());
+}
+</pre><p><br></p><p>普通集合的foreach：</p><pre class="ql-syntax" spellcheck="false">        for (String string : list) {
             System.out.println(string);
         }
 </pre><p><br></p><p>Hashmap的keyset返回的是Iterator&lt;&gt;的key集合，要访问具体value的时候还要调用getEntry方法进行循环，即循环两次。entrySet返回的直接是Entry&lt;,&gt;的迭代，不用进一步循环</p><p>Hashmap三种遍历方式参考<a href="https://blog.csdn.net/gaojiajie333/article/details/79353774" target="_blank">链接</a></p><p><br></p>
