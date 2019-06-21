@@ -7,4 +7,4 @@
         t1.join();
         System.out.println("main end");
     }
-</pre><p>在这个例子中，如果不加join，t1和main线程是并行执行的，加了join之后，main会等</p><p><br></p>
+</pre><p>在这个例子中，如果不加join，t1和main线程是并行执行的，加了join之后，main会等t1执行完了之后再输出main end</p><p><br></p>
