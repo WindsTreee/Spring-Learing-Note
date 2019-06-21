@@ -1,1 +1,10 @@
-<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-649d3c80-8a4e-4758-84a8-63448bf7f3f1"></attachment><p>线程的join作用是调用线程等待该线程完成后才能继续yun'x</p><p><br></p>
+<attachment contenteditable="false" data-atts="%5B%5D" data-aid=".atts-649d3c80-8a4e-4758-84a8-63448bf7f3f1"></attachment><p>线程的join作用是调用线程等待该线程完成后才能继续运行。</p><pre class="ql-syntax" spellcheck="false">public static void main(String[] args) throws InterruptedException
+    {
+        System.out.println("main start");
+
+        Thread t1 = new Thread(new Worker("thread-1"));
+        t1.start();
+        t1.join();
+        System.out.println("main end");
+    }
+</pre><p>在这个例子中，如果不加join，t1和main线程是并行执行的，加了join之后，main会等</p><p><br></p>
